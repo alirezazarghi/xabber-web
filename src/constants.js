@@ -52,7 +52,7 @@ var constants = {
 
     BAD_CONN_STATUSES: [0, 2, 4, 6, 10],
 
-    RECONNECTION_TIMEOUTS: [3000, 10000, 15000],
+    RECONNECTION_TIMEOUTS: [5000, 10000, 15000],
 
     STATUSES: {
         chat:           'Ready for chat',
@@ -74,6 +74,8 @@ var constants = {
         unavailable:    7
     },
 
+    CHATSTATE_INTERVAL_COMPOSING_AUDIO: 30000,
+    CHATSTATE_TIMEOUT_PAUSED_AUDIO: 35000,
     CHATSTATE_TIMEOUT_PAUSED:   5000,
     CHATSTATE_TIMEOUT_STOPPED:  5000,
 
@@ -107,6 +109,7 @@ var constants = {
         ACCOUNT_VCARD_EDIT:             80,
         ROSTER_RIGHT_ACCOUNT_ITEM:      38,
         ROSTER_LEFT_ACCOUNT_ITEM:       40,
+        PARTICIPANT_DETAILS_ITEM:       48,
         CONTACT_RIGHT_ITEM:             32,
         GROUPCHAT_MEMBER_ITEM:          32,
         CONTACT_LEFT_ITEM:              32,
@@ -177,6 +180,8 @@ var constants = {
             icon: 'mdi-cloud'
         }
     },
+
+    PARTICIPANT_ROLES: ['Member', 'Admin', 'Owner'],
 
     XABBER_ACCOUNT_URL: 'https://www.xabber.com/account',
     API_SERVICE_URL: 'https://api.xabber.com/api/v2',
